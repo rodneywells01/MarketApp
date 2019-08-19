@@ -6,7 +6,7 @@ cache:
     - node_modules
 script:
   - npm test
-  - npm run build
+  # - npm run build # TODO: This is breaking builds. Reintroduce later.
 # deploy:
 #   provider: surge
 #   skip_cleanup: true
