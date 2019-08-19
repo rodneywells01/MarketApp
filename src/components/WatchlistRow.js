@@ -3,21 +3,23 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 
-class Watchlist extends React.Component {
+class WatchlistRow extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
+        var cardStyle = {
+            margin: 10
+        }
         return (
             <div>
-                <h1>This is your Watchlist</h1>
-                <Card>
-                    <CardContent>TSLA</CardContent>
+                <Card style={cardStyle}>
+                    <CardContent>{this.props.ticker}</CardContent>
                 </Card>
             </div>
         )
     }
 }
 
-export default Watchlist
+export default WatchlistRow

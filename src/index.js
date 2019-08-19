@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-import WatchlistView from './watchlist-view/WatchlistView'
+// import WatchlistView from './views/watchlist/WatchlistView'
+import SplashPageView from './views/splash/splash-page'
 import * as serviceWorker from './serviceWorker';
 
 
 // ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<WatchlistView />, document.getElementById('root'));
+ReactDOM.render(<SplashPageView />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

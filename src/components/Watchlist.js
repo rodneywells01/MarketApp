@@ -1,10 +1,11 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-// import WatchlistRow from './WatchlistRow'
+import WatchlistRow from './WatchlistRow';
 
 class Watchlist extends React.Component {
     constructor(props) {
+        console.log(props)
         super(props);
         this.state = {
             health: "Fetching Data..."
@@ -14,14 +15,23 @@ class Watchlist extends React.Component {
     componentDidMount() {
         //  Perform all Data fetch
         // https://reactjs.org/docs/lists-and-keys.html
-        var url = process.env.REACT_APP_SERVER_URL + "/health"
+        var url = process.env.REACT_APP_SERVER_URL +
+          `/user/${this.props.username}/watchlists/${this.props.watchlist_name}`
+
         fetch(url)
           .then(res => res.json())
           .then(
             (result) => {
+              console.log(result)
               this.setState({
-                health: result.status
+                watchlist_name: result.watchlist.watchlist_name,
               });
+
+              var watchlist_row = result.watchlist.ticker_list.map(
+                (ticker) => <WatchlistRow ticker={ticker}/>
+              );
+
+              this.setState({watchlist_vals: watchlist_row})
             },
             (error) => {
               this.setState({
@@ -29,15 +39,14 @@ class Watchlist extends React.Component {
               });
             }
           )
+
       }
 
     render() {
         return (
             <div>
-                <h1>This is your Watchlist</h1>
-                <Card>
-                    <CardContent>API Status: {this.state.health}</CardContent>
-                </Card>
+                <h1>{this.state.watchlist_name}</h1>
+                {this.state.watchlist_vals}
             </div>
         )
     }
