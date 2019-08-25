@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: #232931;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-logo {
@@ -17,6 +20,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
 }
 
 .App-link {
@@ -34,4 +38,35 @@
 
 .debug {
     border: 3px solid black;
+}
+
+.left_view {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.right_view {
+  float: right;
+  width: 25%;
+  border: 1px solid black;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  /* z-index: -1; */
+  /* z-index: -1; */
+}
+
+.center-me {
+  position: absolute;
 }
