@@ -47,7 +47,6 @@ function SplashPageView() {
   //   });
   // }
 
-
   const handleClose = () => {
     setOpen(false)
   }
