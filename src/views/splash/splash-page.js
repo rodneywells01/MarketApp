@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Styles
-import '../../common-styles.css'
+import '../../common-styles.css';
 import Button from '@material-ui/core/Button';
 import Modal from '@material-ui/core/Modal';
 import ReactDOM from 'react-dom';
@@ -35,11 +35,11 @@ function SplashPageView() {
 
   const renderWatchlist = () => {
     ReactDOM.render(<WatchlistView username="RodneyWells" watchlist_name="my-watchlist"/>, document.getElementById('root'));
-  }
+  };
 
   const openLogin = () => {
     // var email =
-  }
+  };
 
   // const _handleTextFieldChange: function(e) {
   //   this.setState({
@@ -48,14 +48,14 @@ function SplashPageView() {
   // }
 
   const handleClose = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   return (
     <div className="App">
       <div className="flexContainer">
         <div className="left_view">
-          <div></div>
+          <div />
           <header className="App-header">
             <Particles className="background" height="900px" params={{
               "particles": {
@@ -63,7 +63,7 @@ function SplashPageView() {
                     "value": 150
                   }
               }
-            }}></Particles>
+            }} />
             <div className="center-me">
               <h1>Marketly</h1>
               <h4>Curate and Analyze Market Trends</h4>
