@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@appbaseio/reactivesearch": "^3.0.1",
     "@material-ui/core": "^4.3.2",
+    "auth0-js": "^9.11.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-particles-js": "^2.7.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "request": "^2.88.0",
     "typescript": "^3.5.3"
@@ -33,7 +36,7 @@
     ]
   },
   "devDependencies": {
-    "intellisense": "0.0.1",
-    "jshint": "^2.10.2"
+    "eslint": "^6.4.0",
+    "intellisense": "0.0.1"
   }
 }
