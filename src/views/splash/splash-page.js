@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 
 // Styles
@@ -5,26 +6,25 @@ import '../../common-styles.css';
 import Button from '@material-ui/core/Button';
 import Modal from '@material-ui/core/Modal';
 import ReactDOM from 'react-dom';
-import TextField from "@material-ui/core/TextField";
+import TextField from '@material-ui/core/TextField';
 import Particles from 'react-particles-js';
-import Login from '../../components/Login';
-
 import { makeStyles } from '@material-ui/core/styles';
+import Login from '../../components/Login';
 import WatchlistView from '../watchlist/WatchlistView';
 
 
 const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
-    width: "100%"
+    width: '100%'
   },
   input: {
     marginBottom: 10,
-    color: "white"
+    color: 'white'
   },
   left_view: {
     width: '50%',
-    border: "1px solid black"
+    border: '1px solid black'
   }
 }));
 
@@ -57,13 +57,17 @@ function SplashPageView() {
         <div className="left_view">
           <div />
           <header className="App-header">
-            <Particles className="background" height="900px" params={{
-              "particles": {
-                  "number": {
-                    "value": 150
+            <Particles
+              className="background"
+              height="900px"
+              params={{
+                particles: {
+                  number: {
+                    value: 150
                   }
-              }
-            }} />
+                }
+              }}
+            />
             <div className="center-me">
               <h1>Marketly</h1>
               <h4>Curate and Analyze Market Trends</h4>
@@ -73,13 +77,13 @@ function SplashPageView() {
         <div className="right_view">
           <div>
             <h3>Get Trading</h3>
-            <div style={{width: "70%", display: "inline-block"}}>
-              <TextField className={classes.input} label="Email"></TextField>
-              <TextField className={classes.input} label="Password" type="Password"></TextField>
+            <div style={{ width: '70%', display: 'inline-block' }}>
+              <TextField className={classes.input} label="Email" />
+              <TextField className={classes.input} label="Password" type="Password" />
               <Button variant="contained" color="primary" className={classes.button} onClick={openLogin}>
                 Log In
               </Button>
-              <br/>
+              <br />
               <Button variant="contained" color="primary" className={classes.button}>
                 Sign Up for the Beta
               </Button>

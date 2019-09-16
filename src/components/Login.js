@@ -1,23 +1,24 @@
-import React from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+/* eslint-disable linebreak-style */
+import React from 'react';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    position: "absolute",
+    position: 'absolute',
     width: 400,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(4),
-    outline: "none"
+    outline: 'none'
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    display: "block"
+    display: 'block'
   }
 }));
 
@@ -37,7 +38,7 @@ export default function SimpleModal() {
   const [modalStyle] = React.useState(getModalStyle);
 
   const [values, setValues] = React.useState({
-    name: "Mr. Awesome"
+    name: 'Mr. Awesome'
   });
 
   const handleChange = name => event => {
@@ -45,8 +46,8 @@ export default function SimpleModal() {
   };
 
   const initLogin = () => {
-    var username = values["name"];
-    console.log("Attempting Login!");
+    const username = values.name;
+    console.log('Attempting Login!');
     console.log(username);
   };
 
